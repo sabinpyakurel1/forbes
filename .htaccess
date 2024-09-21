@@ -1,0 +1,10 @@
+# Enable mod_rewrite
+RewriteEngine On
+
+# Example: Redirect all requests to index.php
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ $1.php
+
+# Disable directory browsing
+Options -Indexes
